@@ -1,29 +1,33 @@
-# Python Template Overview
+# Dockerized Application
 
-Brief overview of template for development environment containing Dockerfile, Makefile, Requirements, and CI/CD (github actions)
+The purpose of this project is to build an application using a Docker Container and creating an Image. The application was built using Flask and was pushed to DockerHub using make build and make push. 
 
-[![cicd](https://github.com/nogibjj/jdc154PythonTemplate/actions/workflows/hello.yml/badge.svg)](https://github.com/nogibjj/jdc154PythonTemplate/actions/workflows/hello.yml)
+[![Build and Push Docker Image](https://github.com/jc39963/docker_app/actions/workflows/hello.yml/badge.svg)](https://github.com/jc39963/docker_app/actions/workflows/hello.yml)
 
+## DockerHub
+![alt text](images/image.png)
+![alt text](images/image-1.png)
 
-## requirements.txt
-A textfile containing essential packages and versions for your project. Currently with fillers but can be edited and updated depending on your project needs. Make sure to include versions. 
+## Docker Image
+![alt text](images/image-2.png)
 
-## MAKEFILE
-Defines a set of tasks to be executed. Contains commands for installing your requirements (from requirements.txt), linting, formatting, and testing which can be called with 'make command_name' to check your code and run/compile your files more efficiently in an automated manner.
+## Web App
+This web app gives users a fun fact about their birthdate. Users can input their name and birthday, after clicking "Submit", the page will return their name and a fact about their day of birth. The user interaction was built using HTML, the birthdate was parsed from YYYY-MM-DD datetime format to a string, and the fun fact was generated from [this numbers API](http://numbersapi.com/#random/date) site.  
 
-## github actions
-hello.yml file which can be edited based on needs. For CI/CD to automate the DevOps process. Maps similar to key value pairs and indentation matters for Github/Gitlab to recognize what pipelines / jobs to run when you push code. 
+![alt text](images/image-3.png)
+![alt text](images/image-4.png)
 
-## devcontainer
-Dockerfile and devcontainer to detail virtual machine / environment for project. Update and edit based on project needs.
+## Environment
+* requirements.txt 
+* Dockerfile to set up Flask app and Docker 
+* Makefile - to build the Docker image, run it, and push to Docker Hub
+* github actions - yml file with Github secrets for Docker Hub in order to automate the build and run when pushed to Github
 
-## Preparation
+## Preparation and Running
 1. Open codespaces 
 2. Load repo to code spaces
-2. Wait for installation of all requirements in requirements.txt
+3. Run `make build` to build the Docker image
+4. Run `make run` to run the app
+5. Run `make push` to push the image to Docker Hub
 
-## Check format and test errors
-1. Format code `make format`
-2. Lint code `make lint`
-3. Test code `make test`
-(alternatively, do all with `make all`)
+
