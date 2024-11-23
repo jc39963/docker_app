@@ -9,6 +9,7 @@ The purpose of this project is to build an application using a Docker Container 
 ![alt text](images/image-1.png)
 
 ## Docker Image
+[Link to image](https://hub.docker.com/r/jchen63/docker_jenny)
 ![alt text](images/image-2.png)
 
 ## Web App
